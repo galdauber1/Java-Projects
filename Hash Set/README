@@ -1,0 +1,77 @@
+galdauber1
+
+
+=============================
+=      File description     =
+=============================
+SimpleHashSet.java. - contains the SimpleHashSet implementation.
+OpenHashSet.java -contains the OpenHashSet class implementation.
+ClosedHashSet.java- implements the ClosedHashSet class which extends the simplehashet that is abstract class and use quadratic probing for collisions.
+CollectionFacadeSet.java- implements the CollectionFacadeSet .
+SimpleSetPerformanceAnalyzer.java- implements LongTermStorage class.
+LinkedListWrapper- implements the wrapper class.
+README- README.
+RESULTS- RESULTS.
+
+
+
+=============================
+=          Design           =
+=============================
+ClosedHashSet:
+we use only regular array if we got a collision we use the quadratic probing, also i add
+a flag boolean list while delta a blue we put true in the list(at the index of the value we want to delete),so while we search the array for specific value and get null, we also check the the boolean flag list if true we continue to the next index.
+
+adding value - to add a value  first check if the array contain the value .
+after we are sure the value doesn't exists in the array , we check if we need to resize the table.
+
+contain - searching the table with the index that we got from the probing.
+delete - to delete a value first check if the array contain the value , if so we delete it and change the boolean list.
+
+OpenHashSet:
+the set is  array of the LinkedListWrapper by this way we don't have collisions.
+adding value - to add a value  first check if the array contain the value .
+after we are sure the value doesn't exists in the array , we check if we need to resize the table.
+
+
+contain - searching the table with the index that we got from the probing.
+delete - to delete a value first check if the array contain the value , if so we delete it and change the boolean list.
+
+delete -  to delete a value first check if the array contain the value , if so we delete and check for resizing.
+
+
+
+
+=============================
+=    Answers to questions   =
+=============================
+– Account, in separate, for OpenHashSet’s and ClosedHashSet’s bad results for data1.txt:
+closed set:
+the reason for the bad results is: 
+ because there are a lot of string which has  the same hash code and then get from the clmaping the same index at the first attempt.
+and by the same reason the negative string took alot of time to find .
+
+open hash:
+the adding time was better since if two strings get the same index from the clamping its just adding them to the linked list, but the contain  is not efficent because it need to search the list.
+
+
+
+
+– Summarize the strengths and weaknesses of each of the data structures as reflected by
+the results. Which would you use for which purposes?
+
+the linked list is bad  both in adding and both in contain function because its not efficent.
+and the java hashes is definitely the best for must of the purposes.
+
+
+– How did your two implementations compare between themselves?
+for adding the open is better, but in the contain testing(instead if there are same hash code then the open is better) its almost the same.
+
+– How did your implementations compare to Java’s built in HashSet?
+if there is no collisions almost the same, but if there are the built in is way better.
+
+
+
+
+
+
