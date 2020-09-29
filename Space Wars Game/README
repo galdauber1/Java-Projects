@@ -1,0 +1,49 @@
+galdauber1
+gal dauber
+
+
+=============================
+=      File description     =
+=============================
+HumanSpaceShip.java - contains the human spaceship implementation 
+RunnerSpaceShip.java - implements the runner space ship class.
+SpaceShip.java- implements the spaceship father class.
+SpaceShipAggressive.java- implements the aggressive spaceship.
+SpaceShipBasher.java -implements the basher spaceship.
+SpacShipDrunked.java- implements the drunked spaceship.
+SpaceShipSpecial.java- implements the special spaceship.
+SpaceShipFactory.java- implements the spaceship factory.
+README
+
+
+
+
+=============================
+=          Design           =
+=============================
+I implemented the space ship class  as father class of all the other types of space ships.
+i add additional 2 methods:
+1)getsheild- true if sheild on false else
+2)setCurrentEnergylevel-   add 1 to the energy level
+
+
+
+
+
+=============================
+=  Implementation details   =
+=============================
+all the different types of ships inherit from the space ship father class.
+drunked space ship- * this ship act exactly the opposite from the humanspaceship
+ * if the human press right it goes left.
+ * shield is always on.
+special space ship- special ship that act like the human but cant die.
+
+=============================
+=    Answers to questions   =
+=============================
+
+
+
+
+
